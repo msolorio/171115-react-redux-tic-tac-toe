@@ -1,12 +1,27 @@
 import React from 'react';
 import Square from './Square';
+import { connect } from 'react-redux';
 
-export default function Board(props) {
+export function Board(props) {
+
+  function getSquares() {
+    return props.squareVals.map((squareVal, index) => {
+      return (
+        <Square index={index}
+          squareVal={squareVal} />
+      );
+    });
+  }
+
   return (
     <div className="Board">
-      <Square />
-      <Square />
-      <Square />
+      {getSquares()}
     </div>
   );
 }
+
+const mapStateToProps = (state) => ({
+  squareVals: state.squareVals
+});
+
+export default connect(mapStateToProps)(Board);

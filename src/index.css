@@ -3,3 +3,44 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.App {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.Board {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #999;
+}
+
+.Square {
+  width: 33.33333333%;
+  height: 200px;
+  background: #eee;
+  color: #999;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Square-0,
+.Square-1,
+.Square-2,
+.Square-3,
+.Square-4,
+.Square-5 {
+  border-bottom: 2px solid #999;
+}
+
+.Square-0,
+.Square-1,
+.Square-3,
+.Square-4,
+.Square-6,
+.Square-7 {
+  border-right: 2px solid #999;
+}
