@@ -10,6 +10,10 @@ body {
   margin: 0 auto;
 }
 
+.Message {
+  margin-bottom: 10px;
+}
+
 .Board {
   display: flex;
   flex-wrap: wrap;
